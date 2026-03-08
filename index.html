@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Women's Day My Love 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Dancing+Script:wght@700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1b4e 50%, #1a0a2e 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease;
+        }
+        
+        .header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff69b4, #da70d6, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #ffb6c1;
+            font-size: 1.1em;
+        }
+        
+        .question-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,105,180,0.2);
+            border-radius: 24px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            animation: slideUp 0.6s ease;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .question-number {
+            color: #ff69b4;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .question-text {
+            font-size: 1.3em;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            background: rgba(255,255,255,0.08);
+            border: 2px solid rgba(255,105,180,0.3);
+            border-radius: 16px;
+            padding: 15px;
+            color: #fff;
+            font-size: 1em;
+            font-family: 'Inter', sans-serif;
+            resize: vertical;
+            outline: none;
+        }
+        
+        textarea:focus {
+            border-color: #ff69b4;
+            background: rgba(255,255,255,0.12);
+        }
+        
+        textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .kisses-transition {
+            text-align: center;
+            font-size: 3em;
+            padding: 40px 20px;
+            animation: kissFloat 2s ease-in-out infinite;
+            display: none;
+        }
+        
+        @keyframes kissFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.1); }
+        }
+        
+        .nav-btn {
+            background: linear-gradient(135deg, #ff69b4, #da70d6);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 25px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255,105,180,0.4);
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .letter-section {
+            display: none;
+            animation: fadeIn 1s ease;
+        }
+        
+        .envelope {
+            background: linear-gradient(135deg, #2d1b2d, #1a0a1a);
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 2px solid rgba(255,105,180,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        
+        .wax-seal {
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle at 30% 30%, #ff69b4, #ff1493);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-shadow: 0 4px 15px rgba(255,20,147,0.4);
+        }
+        
+        .letter-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .letter-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2em;
+            color: #ff69b4;
+        }
+        
+        .letter-content {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.25em;
+            line-height: 2;
+            color: #ffb6c1;
+            text-align: center;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            color: rgba(255,105,180,0.2);
+            animation: float 15s infinite ease-in-out;
+            font-size: 20px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff69b4, #da70d6);
+            width: 0%;
+            transition: width 0.5s ease;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="container">
+        <!-- Welcome -->
+        <div class="header" id="welcome">
+            <h1>Happy Women's Day</h1>
+            <p>To the most amazing woman in my life 💕</p>
+            <button class="nav-btn" onclick="startQuiz()" style="margin-top: 30px;">Start Surprise 💝</button>
+        </div>
+
+        <!-- Kiss Transition Template -->
+        <div class="kisses-transition" id="kissTransition">
+            <div>💋 💋 💋 💋 💋</div>
+            <div style="font-size: 0.5em; margin-top: 20px; color: #ff69b4;">Moving to next question...</div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="question-card hidden" id="q1">
+            <div class="question-number">Question 1</div>
+            <div class="question-text">What do you prefer during your periods to make you feel better?</div>
+            <textarea placeholder="Tell me what comforts you the most..."></textarea>
+            <button class="nav-btn" onclick="nextWithKisses(2)">Next 💕</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card hidden" id="q2">
+            <div class="question-number">Question 2</div>
+            <div class="question-text">What do you do when you're in your luteal phase and how does it feel?</div>
+            <textarea placeholder="Share your experience with me..."></textarea>
+            <button class="nav-btn" onclick="nextWithKisses(3)">Next 💖</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card hidden" id="q3">
+            <div class="question-number">Question 3</div>
+            <div class="question-text">Have I been a helping personality at all during those times?</div>
+            <textarea placeholder="Be honest with me..."></textarea>
+            <button class="nav-btn" onclick="nextWithKisses(4)">Next 💗</button>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card hidden" id="q4">
+            <div class="question-number">Question 4</div>
+            <div class="question-text">Which woman do you admire the most that you've met in your life?</div>
+            <textarea placeholder="Who inspires you?"></textarea>
+            <button class="nav-btn" onclick="nextWithKisses(5)">Next 💓</button>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card hidden" id="q5">
+            <div class="question-number">Question 5</div>
+            <div class="question-text">How does it feel to be a woman?</div>
+            <textarea placeholder="Share your thoughts..."></textarea>
+            <button class="nav-btn" onclick="showLetter()">Read My Letter 💌</button>
+        </div>
+
+        <!-- Love Letter -->
+        <div class="letter-section" id="letter">
+            <div class="envelope">
+                <div class="wax-seal">💋</div>
+                <div class="letter-header">
+                    <div class="letter-title">My Dearest Love</div>
+                </div>
+                <div class="letter-content" id="letterText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 0;
+        
+        function createHearts() {
+            const container = document.getElementById('hearts');
+            const symbols = ['💕', '💖', '💗', '💓', '💝', '🌸'];
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heart.style.fontSize = (Math.random() * 15 + 10) + 'px';
+                container.appendChild(heart);
+                setTimeout(() => heart.remove(), 20000);
+            }, 1500);
+        }
+        
+        createHearts();
+        
+        function startQuiz() {
+            document.getElementById('welcome').classList.add('hidden');
+            document.getElementById('q1').classList.remove('hidden');
+            updateProgress(1);
+        }
+        
+        function nextWithKisses(nextNum) {
+            // Hide current question
+            document.getElementById('q' + (nextNum - 1)).classList.add('hidden');
+            
+            // Show kisses transition
+            const kissDiv = document.getElementById('kissTransition');
+            kissDiv.style.display = 'block';
+            
+            // After 2 seconds, show next question
+            setTimeout(() => {
+                kissDiv.style.display = 'none';
+                document.getElementById('q' + nextNum).classList.remove('hidden');
+                updateProgress(nextNum);
+            }, 2000);
+        }
+        
+        function updateProgress(qNum) {
+            const percent = (qNum / 5) * 100;
+            document.getElementById('progressBar').style.width = percent + '%';
+        }
+        
+        function showLetter() {
+            document.getElementById('q5').classList.add('hidden');
+            document.getElementById('letter').style.display = 'block';
+            document.getElementById('progressBar').style.width = '100%';
+            
+            const letterContent = `Happy Women's Day, my love.
+
+First of all, I want to wish you the very best of luck for your exams. I know you'll do amazing because you're brilliant and capable of anything you set your mind to.
+
+I want you to know that I will miss you terribly when you're busy studying and when we can't talk as much. But I'll be thinking of you every moment.
+
+I promise to send you emails whenever I find the time - little messages to remind you that you're loved, that you're doing great, and that I'm always here cheering you on.
+
+This surprise? I've been preparing it all day, thinking about you, thinking about how incredible you are as a woman, as a partner, and as the person I admire most.
+
+You are strong, you are beautiful, and you are capable of conquering anything.
+
+Good luck, my love. I'm always with you.
+
+Forever Yours 💕`;
+            
+            const letterElement = document.getElementById('letterText');
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < letterContent.length) {
+                    letterElement.textContent += letterContent.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 35);
+                }
+            }
+            
+            typeWriter();
+        }
+    </script>
+</body>
+</html>
